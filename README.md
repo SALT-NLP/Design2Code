@@ -1,8 +1,8 @@
-## <p style="text-align: center;">Auditing Gender Presentation Differences in Text-to-Image Models</p>
+## Auditing Gender Presentation Differences in Text-to-Image Models
 
-### <p style="text-align: center;">Yanzhe Zhang, Lu Jiang  $^{1,2}$, Greg Turk, Diyi Yang $^3$</p>
+### Yanzhe Zhang, Lu Jiang  $^{1,2}$, Greg Turk, Diyi Yang $^3$
 
-### <p style="text-align: center;">Georgia Institute of Technology, $^1$ Google Research,  $^2$ Carnegie Mellon University,  $^3$ Stanford University</p>
+### Georgia Institute of Technology, $^1$ Google Research,  $^2$ Carnegie Mellon University,  $^3$ Stanford University
 
 ![Paper Summary](./summary_1.png)
 
