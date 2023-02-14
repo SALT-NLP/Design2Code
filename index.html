@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Auditing Gender Presentation Differences in Text-to-Image Models</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/gatech.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Auditing Gender Presentation Differences in Text-to-Image Models</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://stevenyzzhang.github.io/website/">Yanzhe Zhang</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="http://www.lujiang.info/">Lu Jiang</a><sup>2</sup><sup>3</sup>,</span>
+            <span class="author-block">
+              <a href="https://faculty.cc.gatech.edu/~turk/">Greg Turk</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://cs.stanford.edu/~diyiy/">Diyi Yang</a><sup>4</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Georgia Institute of Technology,</span>
+            <span class="author-block"><sup>2</sup>Google Research,</span>
+            <span class="author-block"><sup>2</sup>Carnegie Mellon University,</span>
+            <span class="author-block"><sup>2</sup>Stanford University,</span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <img src="./static/images/GeorgiaTech_RGB.png" style="margin-right: 50px;" width="200" align="absmiddle"/>  
+            </span><!---->
+            <span class="author-block">
+              <img src="./static/images/google_research.svg" width="300" align="absmiddle"/>  
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <img src="./static/images/cmu-wordmark-horizontal-r.png" style="margin-right: 50px;" width="400" align="absmiddle"/>  
+            </span><!---->
+            <span class="author-block">
+              <img src="./static/images/stanford-university-logo-2.png" width="200" align="absmiddle"/>  
+            </span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2302.03675.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2302.03675"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/SALT-NLP/GEP"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://github.com/SALT-NLP/GEP"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/summary_1.png"
+                 class="summary-image"
+                 alt="Summary image."/>
+    </div>
+  </div>
+</section>
+           
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Text-to-image models, which can generate high-quality images based on textual input, have recently enabled various content-creation tools. Despite significantly affecting a wide range of downstream applications, the distributions of these generated images are still not fully understood, especially when it comes to the potential stereotypical attributes of different genders. In this work, we propose a paradigm (Gender Presentation Differences) that utilizes fine-grained self-presentation attributes to study how gender is presented differently in text-to-image models. By probing gender indicators in the input text (e.g., "a woman" or "a man"), we quantify the frequency differences of presentation-centric attributes (e.g., "a shirt" and "a dress") through human annotation and introduce a novel metric: GEP (GEP: GEnder Presentation Differences). Furthermore, we propose an automatic method to estimate such differences. The automatic GEP metric based on our approach yields a higher correlation with human annotations than that based on existing CLIP scores, consistently across three state-of-the-art text-to-image models. Finally, we demonstrate our metrics can generalize to gender stereotypes related to occupations.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h3 class="title is-4">Note</h3>
+        <div class="content has-text-justified">
+          <p>
+            This study uses GEP to refer specifically to the attribute-level presentation differences between images generated from different gender indicators. Note that the definition of GEP is not built on the common usage of gender presentation (gender expression, used to distinguish from gender identity). Also, we do not make assumptions about the genders of the people generated by text-to-image models.
+          </p>
+        </div>
+      </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Examples</h2>
+                 <img src="./static/images/example_0_1.png"
+                 class="example-image"
+                 alt="Example image."/>
+                 <img src="./static/images/example_1_1.png"
+                 class="example-image"
+                 alt="Example image."/>
+                 <img src="./static/images/example_2_1.png"
+                 class="example-image"
+                 alt="Example image."/>
+                 <img src="./static/images/example_3_1.png"
+                 class="example-image"
+                 alt="Example image."/>
+                 <img src="./static/images/example_4_1.png"
+                 class="example-image"
+                 alt="Example image."/>
+                 <img src="./static/images/example_5_1.png"
+                 class="example-image"
+                 alt="Example image."/>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Data</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            Based on 2 genders, 15 attributes, and 16 contexts, we create 512 <strong>prompts</strong>. Considering 3 state-of-the-art text-to-image models, we generate 5 <strong>images</strong> per prompt using each model. In total, we generate 7680 images.
+          </p>
+          <p>
+            We label the existence of attributes in images through <strong>human annotations</strong> to calculate the GEP metric, which aims at revealing the presentation differences.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Code</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            To automatically calculate the GEP metric, we propose <strong>cross-modal classifiers</strong> based on CLIP embeddings to detect the existence of attributes, outperforming the (calibrated) CLIP similarity.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{zhang2023auditing,
+      title={Auditing Gender Presentation Differences in Text-to-Image Models},
+      author={Yanzhe Zhang and Lu Jiang and Greg Turk and Diyi Yang},
+      year={2023},
+      eprint={2302.03675},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+  }</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This source code of this website is borrowed from <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
