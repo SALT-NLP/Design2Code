@@ -52,7 +52,7 @@
             <span class="author-block"><sup>1</sup>Georgia Institute of Technology,</span>
             <span class="author-block"><sup>2</sup>Google Research,</span>
             <span class="author-block"><sup>2</sup>Carnegie Mellon University,</span>
-            <span class="author-block"><sup>2</sup>Stanford University,</span>
+            <span class="author-block"><sup>2</sup>Stanford University</span>
           </div>
 
           <div class="is-size-5 publication-authors">
@@ -96,7 +96,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/SALT-NLP/GEP"
+                <a href="https://github.com/SALT-NLP/GEP_data"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -106,7 +106,7 @@
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://github.com/SALT-NLP/GEP"
+                <a href="https://github.com/SALT-NLP/GEP_data"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
@@ -205,7 +205,15 @@
           <p>
             We label the existence of attributes in images through <strong>human annotations</strong> to calculate the GEP metric, which aims at revealing the presentation differences.
           </p>
+          <center><img src="./static/images/table.png"
+            class="example-image"
+            style="margin-left: auto; margin-right: auto;" 
+            width="500" 
+            align="center"
+            alt="Table image."/></center>
+         
         </div>
+        <p style="font-size: small" align="center">CogView refers to CogView2, DALLE refers to DALLE-2, Stable refers to Stable Diffusion.</p>
       </div>
     </div>
 
@@ -215,10 +223,30 @@
 
         <div class="content has-text-justified">
           <p>
-            To automatically calculate the GEP metric, we propose <strong>cross-modal classifiers</strong> based on CLIP embeddings to detect the existence of attributes, outperforming the (calibrated) CLIP similarity.
+            To automatically calculate the GEP metric, we propose <strong>cross-modal classifiers</strong> based on CLIP embeddings to detect the existence of attributes, outperforming the (calibrated) CLIP similarity in terms of the correlation with human annotations.
           </p>
         </div>
+        <div class="content">
+          <center><span>
+            <img src="./static/images/combination_stable_cc.png" style="margin-right: 50px;" width="410" align="absmiddle"/>  
+          </span><!---->
+          <span>
+            <img src="./static/images/combination_stable_cls.png" width="400" align="absmiddle"/>  
+          </span></center>
+        </div>
+        <p style="font-size: small" align="center">Left: Automatic GEP estimation using CLIP similarity. Right: Automatic GEP estimation using Cross-modal classifiers.</p>
       </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Ethics Statement</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            In this work, gender indicators that prompt text-to-image models are limited to binary genders. However, gender is _not_ binary. We are fully aware of the harmfulness of excluding non-binary people as it might further marginalize minority groups. Text-to-image models, unfortunately, are intensively trained on two genders. The lack of representation of LGBT individuals in datasets remains a limiting factor for our analysis. Importantly, the framework we propose can be extended to non-binary groups. As dataset representation improves for text-to-image models, we urge future work to re-evaluate representation differences across a wider set of genders.
+          </p>
+        </div>
     </div>
 
   </div>
