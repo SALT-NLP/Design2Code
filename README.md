@@ -1,5 +1,3 @@
-# Nerfies
-
 This is the repository that contains source code for the [GEP website](https://salt-nlp.github.io/GEP/).
 
 The website code is borrowed from the [Nerfies website](https://nerfies.github.io).
