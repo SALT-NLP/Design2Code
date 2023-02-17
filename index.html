@@ -251,12 +251,20 @@
             width="500" 
             align="center"
             alt="Results of the GEP score."/></center>
-          <p style="font-size: small" align="center">CS: CLIP Score, GEP: GEP Score. CogView refers to CogView2, DALLE refers to DALLE-2, Stable refers to Stable Diffusion.</p>
-          <p>
+          <p style="font-size: small" align="center">CS: CLIP Score, GEP: GEP Score. CogView refers to CogView2, DALLE refers to DALLE-2, Stable refers to Stable Diffusion.</p>        
+          </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+
+        <div class="content has-text-justified">
+          <p style="font-size: large; background-color : lightblue">
             <strong>Data Release:</strong> Based on 2 genders, 15 attributes, and 16 contexts, we create 512 <strong>prompts</strong>. We generate 5 <strong>images</strong> per prompt using 3 state-of-the-art text-to-image models (7680 images in total).
             We label the existence of attributes in images that are needed to calculate the GEP metric. <strong>We release the prompts/images/annotations</strong> <a href="https://github.com/SALT-NLP/GEP_data">here</a>.
-          </p>        
-          </div>
+          </p>
+        </div>
       </div>
     </div>
 
@@ -275,8 +283,19 @@
         </div>
         <p style="font-size: small" align="center">Left: Automatic GEP estimation using CLIP similarity. Right: Automatic GEP estimation using Cross-modal classifiers.</p>
         <p>
-          Specifically, we train attribute classifiers on the shared space of CLIP using text captions only and use such classifiers to classify the CLIP embedding of generated images. Note that the proposed approach is as flexible and scalable as calculating CLIP similarity while achieving better performance. <strong>We release the code of the whole pipeline</strong> <a href="https://github.com/SALT-NLP/GEP_data">here</a>.
+          Specifically, we train attribute classifiers on the shared space of CLIP using text captions only and use such classifiers to classify the CLIP embedding of generated images. Note that the proposed approach is as flexible and scalable as calculating CLIP similarity while achieving better performance.
         </p>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+
+        <div class="content has-text-justified">
+          <p style="font-size: large; background-color : lightblue">
+            <strong>Code Release:</strong> We release the code of the whole pipeline <a href="https://github.com/SALT-NLP/GEP_data">here</a>, together with ready-to-use code for testing new models.
+          </p>
+        </div>
       </div>
     </div>
 
