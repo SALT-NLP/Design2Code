@@ -25,9 +25,44 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+
+  <style>
+    table.customTable {
+      width: 50%;
+      background-color: #FFFFFF;
+      border-collapse: collapse;
+      border-width: 2px;
+      border-color: rgb(214, 236, 244);
+      border-style: solid;
+      color: #000000;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    table.customTable td {
+      border-width: 2px;
+      border-color: rgb(214, 236, 244);
+      border-style: solid;
+      padding: 5px;
+      text-align: center; 
+      vertical-align: middle;
+    }
+
+    table.customTable th {
+      border-width: 2px;
+      border-color: rgb(214, 236, 244);
+      border-style: solid;
+      padding: 5px;
+    }
+    
+    table.customTable thead {
+      background-color: rgb(214, 236, 244);
+    }
+    </style>
 </head>
 <body>
-
+  
+  
 
 <section class="hero">
   <div class="hero-body">
@@ -159,6 +194,70 @@
           </p>
         </div>
       </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">(Update!) Leaderboard</h2>
+              <p>
+                We report <strong>the automatic GEP scores (GEP<sub>CLS</sub>) </strong> of five stable diffusion checkpoints (from v1.2 to v2.1) and three popular finetuned checkpoints from the community. All checkpoints are tested in the default configuration (PNDMScheduler, 50 steps, guidance 7.5) using the explicit setting of our prompts (introduced below).
+              </p>
+              <p>
+                We urge the community to be aware of and intentionally mitigate such fairness-related issues while iterating the models. These factors also need to be considered by users of those models when deciding which checkpoints to use.
+              </p>
+
+              <p>
+                (If you want to evaluate your model/report your scores, please email z_yanzhe AT gatech.edu)
+              </p>
+        </div>
+        <table class="customTable">
+          <thead>
+            <tr>
+              <th>Model</th>
+              <td>Auto GEP score</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Stable Diffusion v1.2</th>
+              <td>0.054</td>
+            </tr>
+            <tr>
+              <th>Stable Diffusion v1.4</th>
+              <td>0.059</td>
+            </tr>
+            <tr>
+              <th>Stable Diffusion v1.5</th>
+              <td>0.064</td>
+            </tr>
+            <tr>
+              <th>Stable Diffusion v2.0 base</th>
+              <td>0.065</td>
+            </tr>
+            <tr>
+              <th>Stable Diffusion v2.1 base</th>
+              <td>0.078</td>
+            </tr>
+            <tr>
+              <th>prompthero/openjourney</th>
+              <td>0.073</td>
+            </tr>
+            <tr>
+              <th>hakurei/waifu-diffusion</th>
+              <td>0.067</td>
+            </tr>
+            <tr>
+              <th>Lykon/DreamShaper</th>
+              <td>0.034</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </section>
 
