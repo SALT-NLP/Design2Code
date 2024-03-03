@@ -27,6 +27,20 @@
   <script src="./static/js/index.js"></script>
 
   <style>
+    /* Three image containers (use 25% for four, and 50% for two, etc) */
+    .imgcolumn {
+      float: left;
+      width: 50%;
+      padding: 10px
+    }
+
+    /* Clear floats after image containers */
+    .imgrow::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
     table.customTable {
       width: 50%;
       background-color: #FFFFFF;
@@ -188,31 +202,78 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section"  style="background-color:#d6eeff">
   <div class="container is-max-desktop">
 
     <div class="columns is-centered">
       <div class="column">
         <div class="content">
           <h2 class="title is-3">Examples</h2>
-                 <img src="./static/images/rick.jpg"
-                 class="example-image"
-                 alt="Example image."/>
-                 <img src="./static/images/rick.jpg"
-                 class="example-image"
-                 alt="Example image."/>
-                 <img src="./static/images/rick.jpg"
-                 class="example-image"
-                 alt="Example image."/>
-                 <img src="./static/images/rick.jpg"
-                 class="example-image"
-                 alt="Example image."/>
-                 <img src="./static/images/rick.jpg"
-                 class="example-image"
-                 alt="Example image."/>
-                 <img src="./static/images/rick.jpg"
-                 class="example-image"
-                 alt="Example image."/>
+            <p>The original designs are on the left and the GPT-4V-generated webpages are on the right.</p>
+                <div class="imgrow">
+                  <div class="imgcolumn">
+                    <img src="./static/images/testset_full_2.png" style="width:100%">
+                  </div>
+                  <div class="imgcolumn">
+                    <img src="./static/images/gpt4v_visual_revision_prompting_2.png" style="width:100%">
+                  </div>
+                </div>
+                <div class="imgrow">
+                  <div class="imgcolumn">
+                    <img src="./static/images/testset_full_13.png" style="width:100%">
+                  </div>
+                  <div class="imgcolumn">
+                    <img src="./static/images/gpt4v_visual_revision_prompting_13.png" style="width:100%">
+                  </div>
+                </div>
+                <div class="imgrow">
+                  <div class="imgcolumn">
+                    <img src="./static/images/testset_full_28.png" style="width:100%">
+                  </div>
+                  <div class="imgcolumn">
+                    <img src="./static/images/gpt4v_visual_revision_prompting_28.png" style="width:100%">
+                  </div>
+                </div>
+                <div class="imgrow">
+                  <div class="imgcolumn">
+                    <img src="./static/images/testset_full_33.png" style="width:100%">
+                  </div>
+                  <div class="imgcolumn">
+                    <img src="./static/images/gpt4v_visual_revision_prompting_33.png" style="width:100%">
+                  </div>
+                </div>
+                <div class="imgrow">
+                  <div class="imgcolumn">
+                    <img src="./static/images/testset_full_61.png" style="width:100%">
+                  </div>
+                  <div class="imgcolumn">
+                    <img src="./static/images/gpt4v_visual_revision_prompting_61.png" style="width:100%">
+                  </div>
+                </div>
+                <div class="imgrow">
+                  <div class="imgcolumn">
+                    <img src="./static/images/testset_full_89.png" style="width:100%">
+                  </div>
+                  <div class="imgcolumn">
+                    <img src="./static/images/gpt4v_visual_revision_prompting_89.png" style="width:100%">
+                  </div>
+                </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Model Comparison</h2>
+          <img src="./static/images/text_augmentation_example.png" class="example-image" alt="Example image."/>
+          <img src="./static/images/self_revision_examples.png" class="example-image" alt="Example image."/>
+          <img src="./static/images/open_source_models.png" class="example-image" alt="Example image."/>
+          
         </div>
       </div>
     </div>
