@@ -147,7 +147,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com"
+                <a href="https://github.com/NoviScl/Design2Code"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -157,7 +157,7 @@
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://github.com"
+                <a href="https://github.com/NoviScl/Design2Code"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
@@ -173,16 +173,6 @@
   </div>
 </section>
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <img src="./static/images/rick.jpg"
-                 class="summary-image"
-                 alt="Summary image."/>
-    </div>
-  </div>
-</section>
-           
 
 
 <section class="section">
@@ -193,7 +183,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Generative AI has made rapid advancements in recent years, achieving unprecedented capabilities in multimodal understanding and code generation. This enabled a brand new paradigm of front-end development, where multimodal LLMs can potentially convert visual designs into code implementations directly, thus automating the front-end engineering pipeline. In this work, we provide the first systematic study on this visual design to code implementation task (dubbed as Design2Code) We manually curate a benchmark of 484 real-world webpages as test cases and develop a set of automatic evaluation metrics to assess how well current multimodal LLMs can generate the code implementations that directly render into the given reference webpages, given the screenshots as input. We develop a suit of multimodal prompting methods and show their effectiveness on GPT-4V and Gemini Pro. We also finetune an open-source Design2Code-18B model that successfully matches the performance of Gemini Pro. Both human evaluation and automatic metrics show that GPT-4V is the clear winner on this task, where annotators think GPT-4V generated webpages can replace the original reference webpages in 49% cases in terms of visual appearance and content; and perhaps surprisingly, in 64% cases GPT-4V generated webpages are considered better designed than even the original reference webpages. Our fine-grained break-down metrics indicate that open-source models mostly lag in recalling visual elements from the input webpages and in generating correct layout designs, while aspects like text content and coloring can be drastically improved with proper finetuning.
+            Generative AI has made rapid advancements in recent years, achieving unprecedented capabilities in multimodal understanding and code generation. This enabled a brand new paradigm of front-end development, where multimodal LLMs can potentially <strong>convert visual designs into code implementations directly</strong>, thus automating the front-end engineering pipeline. In this work, we provide the first systematic study on this visual design to code implementation task (dubbed as Design2Code). We manually curate a benchmark of 484 real-world webpages as test cases and develop a set of automatic evaluation metrics to assess how well current multimodal LLMs can generate the code implementations that directly render into the given reference webpages, given the screenshots as input. We develop a suit of multimodal prompting methods and show their effectiveness on GPT-4V and Gemini Vision Pro. We also finetune an open-source Design2Code-18B model that successfully matches the performance of Gemini Vision Pro. Both human evaluation and automatic metrics show that GPT-4V is the clear winner on this task, where annotators think GPT-4V generated webpages can replace the original reference webpages in 49% cases in terms of visual appearance and content; and perhaps surprisingly, in 64% cases GPT-4V generated webpages are considered better than even the original reference webpages. Our fine-grained break-down metrics indicate that open-source models mostly lag in recalling visual elements from the input webpages and in generating correct layout designs, while aspects like text content and coloring can be drastically improved with proper finetuning.
           </p>
         </div>
       </div>
@@ -202,13 +192,56 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Test Set Overview</h2>
+          <img src="./static/images/test_examples_compare.png" class="example-image" alt="Example image."/>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Benchmark Performance (Automatic Metrics)</h2>
+          <p>We consider high-level visual similarity (CLIP) and low-level element matching (block-match, text, position, color).</p>
+          <p>We plot the best performance of each model.</p>
+          <center><img src="./static/images/radar.png" class="example-image" alt="Example image." style="width: 60%;"/></center>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Benchmark Performance (Human Evaluation)</h2>
+          <p>The Win/Tie/Lose rate against the baseline (Gemini Vision Pro Direct Prompting). We sample 100 examples and ask 5 annotators for each pair of comparisons, and we
+            take the majority vote on each example.</p>
+          <img src="./static/images/human_eval_win_rate.png" class="example-image" alt="Example image."/>
+        </div>
+      </div>
+    </div>
+</section>
+
 <section class="section"  style="background-color:#d6eeff">
   <div class="container is-max-desktop">
 
     <div class="columns is-centered">
       <div class="column">
         <div class="content">
-          <h2 class="title is-3">Examples</h2>
+          <h2 class="title is-3">Generated Examples</h2>
             <p>The original designs are on the left and the GPT-4V-generated webpages are on the right.</p>
                 <div class="imgrow">
                   <div class="imgcolumn">
@@ -269,7 +302,7 @@
     <div class="columns is-centered">
       <div class="column">
         <div class="content">
-          <h2 class="title is-3">Model Comparison</h2>
+          <h2 class="title is-3">Model Comparison Examples</h2>
           <img src="./static/images/text_augmentation_example.png" class="example-image" alt="Example image."/>
           <img src="./static/images/self_revision_examples.png" class="example-image" alt="Example image."/>
           <img src="./static/images/open_source_models.png" class="example-image" alt="Example image."/>
